@@ -1,0 +1,28 @@
+<div align="center"><h1>Students CRUD with Angular</h1></div>
+
+<div>
+  <table class="table" style="width: 80%">
+    <tr>
+      <th>Full name</th>
+      <th>University</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let student of students">
+      <td>
+        {{student.fullname}}
+      </td>
+      <td>
+        {{student.university}}
+      </td>
+      <td>
+        <div><button type="button" (click)="deleteStudent(student)">Delete</button></div>
+       </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <p>
+    <button (click)="addStudent()"> Add Student</button>
+  </p>
+</div>
+<router-outlet></router-outlet>
